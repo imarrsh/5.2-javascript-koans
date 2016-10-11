@@ -1,4 +1,4 @@
-
+// ✅ ✅ ✅
 describe("About Functions", function() { //✅
 
   it("should declare functions", function() {
@@ -81,7 +81,7 @@ describe("About Functions", function() { //✅
     expect(returnAllArgs("first", "second", "third")).toBe('first,second,third');
   });
 
-  it("should pass functions as values", function () {
+  it("should pass functions as values", function () { // ✅
 
     var appendRules = function (name) {
       return name + " rules!";
