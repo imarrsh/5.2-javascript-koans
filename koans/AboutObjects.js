@@ -30,10 +30,10 @@ describe("About Objects", function () {
 
     var battleCry = megalomaniac.battleCry(4);
     expect('They are Pinky and the Brain Brain Brain Brain').toMatch(battleCry);
-    // ^^ works because there are 4 'join points' on 5 items
+    // ^^ works because there are 4 'join points' on 5 array items
   });
 
-  it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
+  it("should confirm that when a function is attached to an object, 'this' refers to the object", function () { // ✅
     var currentDate = new Date();
     var currentYear = (currentDate.getFullYear());
     var megalomaniac = {
@@ -45,8 +45,8 @@ describe("About Objects", function () {
       }
     };
 
-    expect(currentYear).toBe(FILL_ME_IN);
-    expect(megalomaniac.calculateAge()).toBe(FILL_ME_IN);
+    expect(currentYear).toBe(2016); // ✅
+    expect(megalomaniac.calculateAge()).toBe(46); // ✅
   });
 
   describe("'in' keyword", function () {
@@ -63,14 +63,14 @@ describe("About Objects", function () {
 
       var hasBomb = "theBomb" in megalomaniac;
 
-      expect(hasBomb).toBe(FILL_ME_IN);
+      expect(hasBomb).toBe(true); // ✅
     });
 
     it("should not have the detonator however", function () {
 
       var hasDetonator = "theDetonator" in megalomaniac;
 
-      expect(hasDetonator).toBe(FILL_ME_IN);
+      expect(hasDetonator).toBe(false); // ✅
     });
   });
 
