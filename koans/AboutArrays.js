@@ -1,6 +1,6 @@
 describe("About Arrays", function() {
 
-  //We shall contemplate truth by testing reality, via spec expectations.
+  //We shall contemplate truth by testing reality, via spec expectations. ✅
   it("should create arrays", function() {
     var emptyArray = [];
     expect(typeof(emptyArray)).toBe('object'); //A mistake? - http://javascript.crockford.com/remedial.html
@@ -15,7 +15,7 @@ describe("About Arrays", function() {
     expect(multiTypeArray[5][0]).toBe(6);
   });
 
-  it("should understand array literals", function () {
+  it("should understand array literals", function () { // ✅
     var array = [];
     expect(array).toEqual([]);
 
@@ -23,10 +23,10 @@ describe("About Arrays", function() {
     expect(array).toEqual([1]);
 
     array[1] = 2;
-    expect(array).toEqual([1, FILL_ME_IN]);
+    expect(array).toEqual([1, 2]);
 
     array.push(3);
-    expect(array).toEqual(FILL_ME_IN);
+    expect(array).toEqual([1, 2, 3]);
   });
 
   it("should understand array length", function () {
