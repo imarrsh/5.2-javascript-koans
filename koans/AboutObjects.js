@@ -13,12 +13,12 @@ describe("About Objects", function () {
 
     it("should confirm that properties are case sensitive", function () {
       expect(megalomaniac.henchwoman).toBe('Harley');
-      expect(megalomaniac.henchWoman).toBe('Harley');
+      expect(megalomaniac.henchWoman).toBe(undefined);
     });
   });
 
 
-  it("should know properties that are functions act like methods", function () {
+  it("should know properties that are functions act like methods", function () { // ✅
     var megalomaniac = {
       mastermind : "Brain",
       henchman: "Pinky",
@@ -29,7 +29,8 @@ describe("About Objects", function () {
     };
 
     var battleCry = megalomaniac.battleCry(4);
-    expect(FILL_ME_IN).toMatch(battleCry);
+    expect('They are Pinky and the Brain Brain Brain Brain').toMatch(battleCry);
+    // ^^ works because there are 4 'join points' on 5 items
   });
 
   it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
